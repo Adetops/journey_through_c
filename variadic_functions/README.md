@@ -1,0 +1,1 @@
+Practices on variadic functions
