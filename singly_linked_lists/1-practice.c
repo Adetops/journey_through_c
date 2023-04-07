@@ -21,6 +21,7 @@ int main(void)
 
 	printf("%d\n", Head->age);
 	printf("%d\n", Head->address->age);
-	
+	free(Head);
+
 	return (0);
 }

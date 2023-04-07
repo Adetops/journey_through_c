@@ -30,6 +30,7 @@ int main(int argc, const char * argv[])
 	((first->next)->next)->next = NULL;
 
 	printf("%d\n", first->value);
+	free(first);
 
 	return (0);
 }
