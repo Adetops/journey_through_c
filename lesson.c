@@ -2,6 +2,7 @@
 
 int main(void)
 {
-    printf("Hello, World!");
+    printf("Hello, World!\n");
+    printf("I am a champion!");
     return (0);
 }
