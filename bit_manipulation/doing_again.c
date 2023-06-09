@@ -3,23 +3,7 @@
 #include <string.h>
 
 unsigned int binary_to_uint(const char *b);
-int __strlen(char *);
 
-/**
- * __strlen - returns the length of a string
- * @s: the string to count
- * Return: the total count
- */
-int __strlen(char *s)
-{
-	int i = 0;
-
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
 /**
  * binary_to_uint - converts a binary number to an unsigned int
  * @b: pointer to a string of 0 and 1 chars
@@ -39,7 +23,7 @@ unsigned int binary_to_uint(const char *b)
 	for (i = 0, n = 0; b[i] != '\0'; i++, n++)
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
-	for (i = 0; n >= 0, b[i] != '\0'; i++, n--)
+	for (i = 0; b[i] != '\0'; i++, n--)
 	{
 		sum += ((b[i] - '0') << (n - 1));
 	}
