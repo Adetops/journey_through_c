@@ -12,18 +12,19 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
+	int i, n, len = 0;
 	unsigned int res = 0;
-	int i, n = strlen(b) - 1;
-77
-	if (b == NULL)
+
+	if (*b == '\0')
 		return (0);
-	
-	for (i = 0; b[i] != '\0'; i++, n--)
+	while (b[len] != '\0')
+		len++;
+	printf("%d\n", len);
+	for (i = 1; i < len; i++)
 	{
-		if (b[i] != '0' || b[i] != '1')
-			return (0);
-		res = b[i] << n;
-		printf("%d\n", res);
+		for (n = len - 1; n >= 0; n--)
+			res += (b[len] << n);
 	}
-	return (uint);
+	printf("%d\n", res);
+	return (res);
 }
